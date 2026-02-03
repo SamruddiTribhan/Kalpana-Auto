@@ -17,15 +17,13 @@ const AdminLogin = () => {
     //   headers: {
     //     'content-type': 'application/json'
     //   }
-    const handleLogin = (e) => {
-  e.preventDefault();
 
-  if(name === "admin" && password === "admin123"){
+    if(name === "admin" && password === "admin123"){
     navigate("/adminPanel");
-  } else {
+    } else {
     setError("Please enter valid login details");
-  }
-};
+    }
+  };
 
     });
 
