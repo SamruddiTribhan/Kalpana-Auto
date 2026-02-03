@@ -11,12 +11,22 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    let result = await fetch("https://projectk-backend.onrender.com/adminLogin", {
-      method: 'post',
-      body: JSON.stringify({  name, password }), // Corrected variable
-      headers: {
-        'content-type': 'application/json'
-      }
+    // let result = await fetch("https://projectk-backend.onrender.com/adminLogin", {
+    //   method: 'post',
+    //   body: JSON.stringify({  name, password }), // Corrected variable
+    //   headers: {
+    //     'content-type': 'application/json'
+    //   }
+    const handleLogin = (e) => {
+  e.preventDefault();
+
+  if(name === "admin" && password === "admin123"){
+    navigate("/adminPanel");
+  } else {
+    setError("Please enter valid login details");
+  }
+};
+
     });
 
     result = await result.json();
