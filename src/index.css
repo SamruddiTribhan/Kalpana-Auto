@@ -1,0 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+
+/* Import FontAwesome */
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: "poppins",sans-serif;
+    color-scheme: dark;
+}
+
+/* Print-specific styles */
+@media print {
+    /* Hide input fields, buttons, and print-specific classes */
+    input, button,.heading, .print-button {
+      display: none;
+    }
+  
+    /* Override text color for printed elements */
+    .container, .print-text {
+      color: black !important; /* Ensures visibility on print */
+    }
+  
+    /* Set specific font properties to ensure printed text is clear */
+    .company-name, .owner-name {
+      font-size: 20px !important; /* Adjust size as necessary */
+      font-weight: bold !important;
+      color: #D32F2F !important;
+    }
+  }
+  
+  
